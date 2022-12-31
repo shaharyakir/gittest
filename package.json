@@ -1,0 +1,22 @@
+{
+  "name": "gittest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaharyakir/gittest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaharyakir/gittest/issues"
+  },
+  "homepage": "https://github.com/shaharyakir/gittest#readme",
+  "dependencies": {
+    "ipfs-only-hash": "^4.0.0"
+  }
+}
