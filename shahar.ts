@@ -1,10 +1,14 @@
 import { of } from "ipfs-only-hash";
-import { Cell } from "ton";
+import { beginCell, Cell } from "ton";
 
 class Calc {
   add(num1: number, num2: number) {
     return num1 + num2;
   }
+}
+
+function buildSigCell(): Cell {
+  return beginCell().storeBit(1).endCell();
 }
 
 const calc = new Calc();
@@ -22,6 +26,8 @@ const calc = new Calc();
     }
     mostDeepSigCell = mostDeepSigCell.refs[0];
   }
+
+  mostDeepSigCell.refs.push(buildSigCell());
 
   return {
     ipfsHash: await of(
